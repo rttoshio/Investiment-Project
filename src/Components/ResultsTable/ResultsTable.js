@@ -1,3 +1,5 @@
+import classes from "./ResultsTable.module.css";
+
 const formatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
@@ -9,7 +11,7 @@ const ResultsTable = (props) => {
   return (
     /* Todo: Show below table conditionally (only once result data is available) */
     /* Show fallback text if no data is available */
-    <table className="result">
+    <table className={classes.result}>
       <thead>
         <tr>
           <th>Year</th>
@@ -40,13 +42,6 @@ const ResultsTable = (props) => {
             </td>
           </tr>
         ))}
-        <tr>
-          <td>YEAR NUMBER</td>
-          <td>TOTAL SAVINGS END OF YEAR</td>
-          <td>INTEREST GAINED IN YEAR</td>
-          <td>TOTAL INTEREST GAINED</td>
-          <td>TOTAL INVESTED CAPITAL</td>
-        </tr>
       </tbody>
     </table>
   );
